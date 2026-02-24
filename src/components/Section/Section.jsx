@@ -6,18 +6,17 @@ import styles from "./Section.module.css";
 function Section({ title, endpoint }) {
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
-    const res = await axios.get(endpoint);
-    setData(res.data);
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get(endpoint);
+      setData(res.data);
+    };
+
     fetchData();
-  }, []);
+  }, [endpoint]);
 
   return (
     <div className={styles.section}>
-      
       {/* HEADER */}
       <div className={styles.header}>
         <h2>{title}</h2>
@@ -30,7 +29,6 @@ function Section({ title, endpoint }) {
           <Card key={item.id} data={item} />
         ))}
       </div>
-
     </div>
   );
 }
