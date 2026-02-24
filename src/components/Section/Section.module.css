@@ -1,0 +1,35 @@
+.section {
+  background: #121212;
+  color: white;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* ⭐ ADD THIS — MAIN FIX */
+.grid {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+}
+
+/* ⭐ VERY IMPORTANT */
+.grid > * {
+  flex-shrink: 0;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 160px;
+}

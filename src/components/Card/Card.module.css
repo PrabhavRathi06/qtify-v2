@@ -1,0 +1,37 @@
+.card {
+  width: 159px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.image {
+  width: 159px;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* THIS IS THE WHITE PART YOU ARE MISSING */
+.bottom {
+  background: white;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.chip {
+  background: black !important;
+  color: white !important;
+  font-size: 10px !important;
+  height: 23px !important;
+}
+
+.title {
+  margin-top: 6px;
+  font-size: 14px;
+}
