@@ -1,0 +1,9 @@
+.carouselWrapper {
+  position: relative;
+}
+
+/* REMOVE ALL SWIPER DEFAULT BUTTONS */
+:global(.swiper-button-prev),
+:global(.swiper-button-next) {
+  display: none !important;
+}

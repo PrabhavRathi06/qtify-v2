@@ -1,29 +1,18 @@
 import Chip from "@mui/material/Chip";
 import styles from "./Card.module.css";
 
-function Card({ data }) {
+function Card({ data, isSong = false }) {
   return (
     <div className={styles.card}>
+      <img src={data.image} alt={data.title} />
 
-      {/* IMAGE */}
-      <img
-        src={data.image}
-        alt={data.title}
-        className={styles.image}
-      />
-
-      {/* WHITE BOTTOM SECTION */}
-      <div className={styles.bottom}>
-        <Chip
-          label={`${data.follows} Follows`}
-          size="small"
-          className={styles.chip}
-        />
+      <div className={styles.banner}>
+        <p>
+          {isSong ? `${data.likes} Likes` : `${data.follows} Follows`}
+        </p>
       </div>
 
-      {/* TITLE */}
-      <p className={styles.title}>{data.title}</p>
-
+      <p>{data.title}</p>
     </div>
   );
 }
